@@ -1,0 +1,606 @@
+html {
+  scroll-behavior: smooth;
+}
+
+*, body {
+    opacity: 1;
+    padding: 0;
+    margin: 0;
+}
+p, li, a, h1, h2, h3, input, body{
+    font-family: "Proxima Nova";
+}
+p {
+    font-size: 14pt;
+}
+a {
+    text-decoration: none;
+    color: #32C63F;
+}
+.anchor {
+    display: block;
+    position: absolute;
+    top: -100px;
+    visibility: hidden;
+}
+.header {
+    height: 100px;
+    width: 100vw;
+    position: fixed;
+    background-color: rgba(26, 26, 26, 0.95);
+    z-index: 1;
+}
+.home-link-wrapper {
+}
+.dp {
+    height: 60px;
+    margin: 18px 0 0 40px;
+}
+.menu {
+    position: absolute;
+    right: 40px;
+    top: 38%;
+}
+.menu li {
+    text-transform: uppercase;
+    display: inline-block;
+    margin-left: 80px;
+    letter-spacing: 0.1em;
+    font-size: 14pt;
+}
+.menu li a {
+    color: white;opacity: 0.8;
+}
+.menu li a:hover {
+    color: #32C63F;
+    opacity:1;
+}
+.section {
+    width: 100vw;
+    height: calc(100vh - 100px);
+    position: relative;
+    display: inline-block;
+    margin-top:-3px;
+    margin-bottom:-3px;
+}
+h1 {
+    position:absolute;
+    font-size: 100pt;
+    bottom: 40px;
+    left: 40px;
+    max-width: 800px;
+    color: white;
+    line-height: 100pt;
+}
+.textbox {
+    position: absolute;
+    top: 140px;
+    right: 40px;
+    max-width: 600px;
+    color: white;
+}
+.textbox p {
+    
+    font-size: 24pt;
+}
+.messenger-link {
+    position: absolute;
+    bottom: 60px;
+    left: 40px;
+    height: 70px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+}
+body.homepage .section1 h1 {
+    color: white;
+}
+body.homepage .section3, body.homepage .section4 {
+    background-color: #dddddd;
+}
+.section1 h1 {
+    bottom: 150px;
+}
+.bg-img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.section .bg-img, .bg-img-third {
+    background-size: cover;
+    z-index: -1;
+}
+.bg-img-third {
+    width: 33.33%;
+    height: calc(100vh - 100px);
+    position: absolute;
+    padding; 0;
+    margin: 0;
+    top: 0;
+    z-index: -2;
+}
+body.homepage .section1 .bg-img {
+    background-image: url(images/kymellis.jpeg);
+    background-position: 50%, 10%;
+}
+.first-third-column .bg-img-third {
+    background-image: url(images/owngrown-pic.jpeg);
+    background-position: 50%, 50%;
+    left: 0;
+}
+.second-third-column .bg-img-third {
+    background-image: url(images/ssd-pic.png);
+    background-position: 50%, 50%;
+    left: 33.33vw;
+}
+.third-third-column .bg-img-third {
+    background-image: url(images/culprit-pic.png);
+    background-position: 50%, 50%;
+    left: 66.66vw;
+}
+.darken {
+    background-color: black;
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0.6;
+}
+.third-column .darken {
+    width: 33.33vw;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+.first-third-column .darken {
+    left:0;
+}
+.second-third-column .darken {
+    left:33.33vw;
+}
+.third-third-column .darken {
+    left:66.66vw;
+}
+.img-credit {
+    position: absolute;
+    color: white;
+    opacity: 0.4;
+}
+.img-credit:hover {
+    opacity: 1;
+}
+.img-credit:hover a {
+    color: #32C63F;
+}
+.img-credit a {
+    color:white;
+}
+.section1 .img-credit {
+    left: 20px;
+    top: 120px;
+}
+.next-button {
+    position: absolute;
+    bottom: 40px; right: 40px;
+    height: 80px;
+}
+
+.horizontal-scroll {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+.third-column {
+    flex: 0 0 auto;
+    width: 33.33vw;
+}
+.first-third-column {
+}
+.client-logo {
+    width: 200px;
+    position: relative;
+    margin: 40px 0 40px 40px;
+}
+.third-column p {
+    width: calc(33.33vw - 100px);
+    padding-left: 40px;
+    color: white;
+    z-index: 1;
+}
+.third-column li {
+    list-style: none;
+    display: inline-block;
+    position: relative;
+    top: 40px;
+    left: 40px;
+    margin-right: 40px;
+}
+.third-column li img {
+    width: 40px;
+}
+
+.section3 h1 {
+    color: black;
+}
+.section3 .pastlogos-wrapper {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    max-width: 600px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.pastlogos-wrapper li {
+    display: inline-flex;
+    
+}
+.past-logo {
+    width: 120px;
+    height: 120px;
+    margin: 20px;
+    clip-path: circle(60px at center);
+}
+.past-logo:hover {
+    clip-path: none;
+    
+}
+.linktree {
+    position: absolute;
+    right: 140px; bottom: 60px;
+    background-color: black;
+    padding: 20px;
+}
+.linktree li {
+    display: inline-block;
+}
+.linktree img {
+    width: 20px;
+    margin-right: 20px;
+}
+.linktree p {
+    display: inline-block;
+    font-size: 18pt;
+    color: white;
+}
+.section4 h1 {
+    color: black;
+}
+.section4 .services-icon-wrapper {
+    position: absolute;
+    font-size: 24pt;
+    top: 40px;
+    right: 40px;
+    max-width: 600px;
+}
+.section4 .services-icon-wrapper li {
+    list-style: none;
+    margin-bottom: 40px;
+}
+.section4 .services-icon-wrapper img {
+    width: 100px;
+    display: inline-block; margin-right: 40px;
+}
+.section4 .services-icon-wrapper h3 {
+    display: inline-block;
+    color: black;
+    max-width: 400px;
+}
+.testimonial {
+    padding: 40px;
+    text-align: center;
+    font-size: 30pt;
+}
+
+
+/*ABOUT*/
+
+
+body.aboutpage .section1 .next-button {
+    bottom: 80px;
+}
+.whoiam-img {
+    height: 300px;
+    top: 140px;
+    left: 40px;
+    position: absolute;
+}
+
+body.aboutpage .section h1 {
+    bottom: 40px;
+    color: white;
+}
+body.aboutpage .section1 h1, body.servicespage .section h1, body.servicespage .section p, body.contactpage .section h1, body.contactpage .section .textbox p, .section h1, body.contactpage .section .textbox form {
+    color: black;
+}
+body.aboutpage .section .textbox, body.servicespage .section .textbox {
+    top: 40px;
+}
+
+body.aboutpage .section1 .textbox, body.servicespage .section1 .textbox {
+    top: 140px;
+    color: black;
+}
+body.aboutpage .section2 .bg-img {
+    background-image: url("images/nickshotz.jpeg");
+}
+body.aboutpage .section3 .bg-img {
+    background-image: url("images/timbennet.jpeg");
+}
+body.aboutpage .section4 .bg-img {
+    background-image: url("images/headway.jpeg");
+}
+body.aboutpage .img-credit {
+    left: 20px;
+    top: 20px;
+}
+
+/*SERVICES*/
+
+body.servicespage .section1 h1 {
+    bottom: 40px;
+}
+
+.green-button {
+    padding: 20px;
+    background-color: #32C63F;
+    max-width: 50%;
+    margin-top: 40px;
+    float: right;
+    border-radius: 10px;
+}
+.section a .green-button p {
+    color: white;
+    font-size: 18pt;
+    line-height: 24pt;
+}
+
+.section1 .servicespage-icon {
+    top:140px;
+}
+.servicespage-icon {
+    top: 40px;
+    left: 40px;
+    position: absolute;
+    height: 300px;
+}
+
+/*CONTACT*/
+
+body.contactpage .section1 h1 {
+    top: 140px;
+}
+form {
+    margin-top: 40px;
+}
+.textbox form p {
+    font-size: 14pt;
+    margin-bottom: 5pt;
+}
+input {
+    border:none;
+    background-image:none;
+    background-color:transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
+    
+    background-color: white;
+    margin-bottom: 15px;
+    min-height: 30px;
+    border-radius: 2pt;
+    display: inline-block;
+    
+}
+.message {
+    height: 40px;
+    width: 560px;
+}
+.submit {
+    background: none;
+    border: 0;
+    color: inherit;
+    font: inherit;
+    line-height: normal;
+    overflow: visible;
+    padding: 20px;
+    border-radius: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    
+    background-color: #32C63F;
+    color: white;
+}
+.testimonial li {
+    list-style: none;
+}
+
+
+/*MOBILE*/
+
+@media only screen and (max-width: 600px) {
+    * {
+    outline: 1pt solid lightblue;
+    }
+    p {
+        font-size: 14pt;
+    }
+    a {
+        text-decoration: none;
+        color: #32C63F;
+    }
+    .anchor {
+    }
+    .header {
+        height: 100px;
+    }
+    .dp {
+    }
+    .menu {
+    }
+    .menu li {
+        display: block;
+    }
+    .menu li a {opacity: 1;
+    }
+    .section {
+    }
+    h1 {
+        font-size: 40pt;
+        top: 40px;
+        left: 40px;
+        line-height: 40pt;
+    }
+    .textbox {
+        top: 240px;
+        left: 40px;
+        max-width: 600px;
+    }
+    .textbox p {
+
+        font-size: 20pt;
+    }
+    .messenger-link {  
+        display: none;
+    }
+    .section1 h1 {
+        top: 150px;
+    }
+    .bg-img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+    }
+    .section .bg-img, .bg-img-third {
+    }
+    .bg-img-third {
+        width: 33.33%;
+    }
+    }
+    .darken {
+        width: 100%;
+    }
+    .third-column .darken {
+        width: 33.33vw;
+    }
+    .first-third-column .darken {
+        left:0;
+    }
+    .second-third-column .darken {
+        left: 100vw;
+    }
+    .third-third-column .darken {
+        left: 100vw;
+    }
+    .img-credit {
+        display:none;
+    }
+    .next-button {
+        display: none;
+    }
+    .third-column {
+        flex: 0 0 auto;
+        width: 100vw;
+    }
+    .first-third-column {
+    }
+    .client-logo {
+        width: 200px;
+        position: relative;
+        margin: 40px;
+    }
+    .third-column p {
+        width: calc(100vw - 100px);
+    }
+    .third-column li {
+    }
+    .third-column li img {
+        width: 40px;
+    }
+
+    .section3 h1 {
+        color: black;
+    }
+    .section3 .pastlogos-wrapper {
+        top: 180px;
+        left: 40px;
+    }
+
+    .past-logo {
+        margin: 40px;
+    }
+    .linktree {
+        display: none;
+    }
+    .section4 .services-icon-wrapper {
+        font-size: 20pt;
+        top: 140px;
+        left: 40px;
+    }
+    .section4 .services-icon-wrapper li {
+    }
+    .section4 .services-icon-wrapper img {
+    }
+    .section4 .services-icon-wrapper h3 {
+        max-width: 300px;
+    }
+    .testimonial {
+    }
+
+
+    /*ABOUT*/
+
+
+    .whoiam-img {
+        width: calc(100vw - 80px);
+        height:auto;
+        top: 240px;
+        position: absolute;
+    }
+
+    body.aboutpage .section h1 {
+        top: 40px;
+    }
+    body.aboutpage .section1 .textbox {
+        top: 240px;
+        position: absolute;
+    }
+    body.aboutpage .section1 h1 {
+        top: 140px;
+    }
+    body.aboutpage .section .textbox, body.servicespage .section .textbox {
+        top: 140px;
+    }
+
+    body.aboutpage .section1 .textbox, body.servicespage .section1 .textbox {
+        top: 140px;
+    }
+
+    /*SERVICES*/
+
+    body.servicespage .section1 h1 {
+        top: 140px;
+    }
+
+    .green-button {
+        
+        float: left;
+    }
+
+    .section1 .servicespage-icon {
+        top: 240px;
+    }
+    .servicespage-icon {
+        top: 340px;
+        height: 200px;
+    }
+.green-button {
+    bottom: 40px;
+    top: auto;
+}
+
+    /*CONTACT*/
+
+   
+    body.contactpage .testimonial li {
+        display: none;
+    }
+}
