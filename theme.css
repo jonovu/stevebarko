@@ -93,9 +93,6 @@ h1 {
 body.homepage .section1 h1 {
     color: white;
 }
-body.homepage .section3, body.homepage .section4 {
-    background-color: #dddddd;
-}
 .section1 h1 {
     bottom: 150px;
 }
@@ -131,10 +128,29 @@ body.homepage .section1 .bg-img {
     background-position: 50%, 50%;
     left: 33.33vw;
 }
+.third-column.second-third-column p {
+    color: black;
+}
 .third-third-column .bg-img-third {
     background-image: url(images/culprit-pic.png);
     background-position: 50%, 50%;
     left: 66.66vw;
+}
+body.homepage .section3 .bg-img {
+    background-image: url(images/past-clients.jpeg);
+}
+body.servicespage .section1 .bg-img {
+    background-image: url(images/audit.jpg);
+    background-position: 50%, 10%;
+}
+body.servicespage .section2 .bg-img {
+    background-image: url(images/management.jpg);
+    background-position: 50%, 40%;
+}
+body.servicespage .section3 .bg-img {
+    background-image: url(images/solutions.jpg);
+    background-position: 50%, 0%;
+    transform: scaleX(-1);
 }
 .darken {
     background-color: black;
@@ -153,29 +169,30 @@ body.homepage .section1 .bg-img {
 .first-third-column .darken {
     left:0;
 }
-.second-third-column .darken {
-    left:33.33vw;
-}
 .third-third-column .darken {
     left:66.66vw;
 }
 .img-credit {
     position: absolute;
     color: white;
-    opacity: 0.4;
+    opacity: 0.8;
 }
-.img-credit:hover {
+/*.img-credit:hover {
     opacity: 1;
 }
 .img-credit:hover a {
     color: #32C63F;
-}
+}*/
 .img-credit a {
     color:white;
 }
 .section1 .img-credit {
     left: 20px;
     top: 120px;
+}
+body.homepage .section3 .img-credit {
+    left: 20px;
+    top: 20px;
 }
 .next-button {
     position: absolute;
@@ -308,8 +325,11 @@ body.aboutpage .section h1 {
     bottom: 40px;
     color: white;
 }
-body.aboutpage .section1 h1, body.servicespage .section h1, body.servicespage .section p, body.contactpage .section h1, body.contactpage .section .textbox p, .section h1, body.contactpage .section .textbox form {
+body.aboutpage .section1 h1, body.servicespage .section p, body.contactpage .section h1, body.contactpage .section .textbox p, .section h1, body.contactpage .section .textbox form {
     color: black;
+}
+body.homepage .section.section3 h1 {
+    color: white;
 }
 body.aboutpage .section .textbox, body.servicespage .section .textbox {
     top: 40px;
@@ -338,7 +358,17 @@ body.aboutpage .img-credit {
 body.servicespage .section1 h1 {
     bottom: 40px;
 }
-
+body.servicespage .section h1 {
+    font-size: 70pt;
+    line-height: 70pt;
+    color: white;
+}
+body.servicespage .section p {
+    color: white;
+}
+body.servicespage .section3 h1 {
+    font-size: 80pt; line-height: 80pt;
+}
 .green-button {
     padding: 20px;
     background-color: #32C63F;
@@ -416,10 +446,8 @@ input {
 
 /*MOBILE*/
 
+
 @media only screen and (max-width: 600px) {
-    * {
-    outline: 1pt solid lightblue;
-    }
     p {
         font-size: 14pt;
     }
@@ -438,13 +466,22 @@ input {
     }
     .menu li {
         display: block;
+        text-align: right;
     }
     .menu li a {opacity: 1;
+        font-size: 11pt;
+    }
+    .mobile-non-active {
+        display: none;
+    }
+    .mobile-non-active:active {
+        display: inline-block;
+        outline: 1pt solid red;
     }
     .section {
     }
-    h1 {
-        font-size: 40pt;
+    h1, body.servicespage .section h1 , body.servicespage .section3 h1 {
+        font-size: 30pt;
         top: 40px;
         left: 40px;
         line-height: 40pt;
@@ -456,13 +493,22 @@ input {
     }
     .textbox p {
 
-        font-size: 20pt;
+        font-size: 16pt;
+        line-height: 20pt;
+    }
+    body.homepage .section1 .textbox {
+        position: relative;
+        margin-top: 40px;
+        max-width: 85%;
+        top: 140px;
     }
     .messenger-link {  
         display: none;
     }
     .section1 h1 {
         top: 150px;
+        position: relative;
+        max-width: 85%;
     }
     .bg-img {
         width: 100%;
@@ -472,32 +518,35 @@ input {
     .section .bg-img, .bg-img-third {
     }
     .bg-img-third {
-        width: 33.33%;
-    }
+        width: 100%;
     }
     .darken {
         width: 100%;
     }
     .third-column .darken {
-        width: 33.33vw;
+        width: 100vw;
     }
     .first-third-column .darken {
         left:0;
     }
-    .second-third-column .darken {
-        left: 100vw;
-    }
+    
     .third-third-column .darken {
-        left: 100vw;
+        left: 200vw;
+    }
+    .second-third-column .bg-img-third {
+        left:100vw;
+    }
+    .third-third-column .bg-img-third {
+        left:200vw;
     }
     .img-credit {
         display:none;
     }
     .next-button {
-        display: none;
+        bottom: 80px;
+        margin: auto;
     }
     .third-column {
-        flex: 0 0 auto;
         width: 100vw;
     }
     .first-third-column {
@@ -522,10 +571,12 @@ input {
     .section3 .pastlogos-wrapper {
         top: 180px;
         left: 40px;
+        max-height: 80%px;
     }
 
     .past-logo {
-        margin: 40px;
+        margin: 20px;
+        
     }
     .linktree {
         display: none;
@@ -551,17 +602,20 @@ input {
 
     .whoiam-img {
         width: calc(100vw - 80px);
-        height:auto;
-        top: 240px;
-        position: absolute;
+        margin-bottom: 20px;
+        height: auto;
+        top: 200px;
+        position: relative;
+        display: inline-block;
     }
 
     body.aboutpage .section h1 {
         top: 40px;
     }
-    body.aboutpage .section1 .textbox {
-        top: 240px;
-        position: absolute;
+    body.aboutpage .section.section1 .textbox {
+        top: 200px;
+        position: relative;
+        max-width: 85%;
     }
     body.aboutpage .section1 h1 {
         top: 140px;
@@ -569,10 +623,12 @@ input {
     body.aboutpage .section .textbox, body.servicespage .section .textbox {
         top: 140px;
     }
-
-    body.aboutpage .section1 .textbox, body.servicespage .section1 .textbox {
-        top: 140px;
+    body.servicespage .section .textbox {
+        position: relative;
+        max-width: 85%;
+        margin-top: 40px;
     }
+
 
     /*SERVICES*/
 
@@ -592,10 +648,10 @@ input {
         top: 340px;
         height: 200px;
     }
-.green-button {
+    .green-button {
     bottom: 40px;
     top: auto;
-}
+    }
 
     /*CONTACT*/
 
