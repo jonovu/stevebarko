@@ -118,6 +118,10 @@ body.homepage .section1 .bg-img {
     background-image: url(images/kymellis.jpeg);
     background-position: 50%, 10%;
 }
+body.homepage .section4 .bg-img {
+    background-image: url(images/services-bg.jpeg);
+    background-position: top;
+}
 .first-third-column .bg-img-third {
     background-image: url(images/owngrown-pic.jpeg);
     background-position: 50%, 50%;
@@ -188,9 +192,9 @@ body.servicespage .section3 .bg-img {
 }
 .section1 .img-credit {
     left: 20px;
-    top: 120px;
+    top: 140px;
 }
-body.homepage .section3 .img-credit {
+body.homepage .section3 .img-credit, body.homepage .section4 .img-credit {
     left: 20px;
     top: 20px;
 }
@@ -254,10 +258,10 @@ body.homepage .section3 .img-credit {
     width: 120px;
     height: 120px;
     margin: 20px;
-    clip-path: circle(60px at center);
+    clip-path: circle(58px at center);
 }
 .past-logo:hover {
-    clip-path: none;
+    clip-path: circle(60px at center);
     
 }
 .linktree {
@@ -298,9 +302,12 @@ body.homepage .section3 .img-credit {
 }
 .section4 .services-icon-wrapper h3 {
     display: inline-block;
-    color: black;
     max-width: 400px;
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 0.1em;
 }
+
 .testimonial {
     padding: 40px;
     text-align: center;
@@ -328,8 +335,11 @@ body.aboutpage .section h1 {
 body.aboutpage .section1 h1, body.servicespage .section p, body.contactpage .section h1, body.contactpage .section .textbox p, .section h1, body.contactpage .section .textbox form {
     color: black;
 }
-body.homepage .section.section3 h1 {
+body.homepage .section.section3 h1, body.homepage .section.section4 h1, body.homepage .section.section4 h3 {
     color: white;
+}
+body.homepage .section.section4 .services-icon-wrapper h3:hover {
+    color: #32C63F;
 }
 body.aboutpage .section .textbox, body.servicespage .section .textbox {
     top: 40px;
