@@ -9,7 +9,19 @@ html {
     margin: 0;
 }
 p, li, a, h1, h2, h3, input, body{
-    font-family: "Proxima Nova";
+    font-family: "Proxima";
+}
+@font-face {
+font-family: 'Proxima';
+src: url('proxima-reg.woff') format('woff');
+font-weight: normal;
+font-style: normal;
+}
+@font-face {
+font-family: 'Proxima';
+src: url('proxima-bold.woff') format('woff');
+font-weight: bold;
+font-style: normal;
 }
 p {
     font-size: 14pt;
@@ -55,6 +67,14 @@ a {
 .menu li a:hover {
     color: #32C63F;
     opacity:1;
+}
+.hamburger {
+    display: none;
+    position: fixed;
+    top: 40px;
+    right: 40px;
+    color: white;
+    letter-spacing: 0.1em;
 }
 .section {
     width: 100vw;
@@ -358,7 +378,10 @@ body.homepage .section3 .img-credit, body.homepage .section4 .img-credit {
 .testimonial {
     padding: 40px;
     text-align: center;
-    font-size: 30pt;
+    font-size: 24pt;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
 }
 
 
@@ -441,10 +464,10 @@ body.servicespage .section3 h1 {
 }
 
 @keyframes green-button-anim {
-    0%   { opacity: 0.9; transform: translateY(-4px);}
+    0%   { opacity: 0.8; transform: translateY(-2px);}
     30% { opacity: 1; transform: translateY(-1px);}
     95% { opacity: 1; transform: translateY(0px);}
-    100% { opacity: 0; transform: translateY(2px);}
+    100% { opacity: 0.8; transform: translateY(2px);}
 }
 .section a .green-button p {
     color: white;
@@ -559,13 +582,31 @@ body.contactpage .testimonial li:nth-child(3) {
     .dp {
     }
     .menu {
+        right: 20px;
     }
     .menu li {
-        display: block;
-        text-align: right;
+        visibility: hidden;
+        pointer-events: none;
+        text-align: center;
+        opacity: 0;
+        transition: opacity 0.2s ease, transform 0.4s ease;
+        transform: translateY(76px);
     }
-    .menu li a {opacity: 1;
+    .active li {
+        transform: translateY(80px);
+        pointer-events:auto;
+        visibility: visible;
+        display: block;
+        background-color: rgba(26, 26, 26, 0.95);
+        padding: 30px;
+        opacity: 1;
+    }
+    .menu li a {
+        opacity: 1;
         font-size: 11pt;
+    }
+    .hamburger {
+        display: block;
     }
     .mobile-non-active {
         display: none;

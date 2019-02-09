@@ -49,4 +49,11 @@ $(document).ready(function() {
         });
     });
     
+    $('.hamburger').click(function () {
+        $('.hamburger-expand').toggleClass('active');
+    });
+    $('.section').click(function () {
+        $('.hamburger-expand').removeClass('active');
+    });
+    
  });
