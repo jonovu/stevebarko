@@ -333,12 +333,20 @@ body.homepage .section3 .img-credit, body.homepage .section4 .img-credit {
 .linktree {
     position: absolute;
     right: 140px; bottom: 60px;
-    background-color: black;
+    background-color: #32C63F;
+    border-radius: 10px;
     padding: 20px;
     display: none;
 }
+.linktree:hover li {
+    opacity: 0.1;
+}
+.linktree li:hover {
+    opacity: 1;
+}
 .linktree li {
     display: inline-block;
+    transition: opacity 0.2s ease;
 }
 .linktree img {
     width: 20px;
@@ -407,6 +415,13 @@ body.aboutpage .section1 h1, body.servicespage .section p, body.contactpage .sec
 }
 body.homepage .section.section3 h1, body.homepage .section.section4 h1, body.homepage .section.section4 h3 {
     color: white;
+}
+body.homepage .section.section3 .black {
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -2;
 }
 body.homepage .section.section4 .services-icon-wrapper h3:hover {
     color: #32C63F;
